@@ -1,4 +1,4 @@
-package com.foodev.server.entity;
+package com.foodev.server.domain;
 
 /**
  * Created by Adrienne on 26.04.17.

@@ -1,14 +1,28 @@
-package com.foodev.server.entity;
+package com.foodev.server.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /**
  * Created by Adrienne on 26.04.17.
  */
+@Entity
+@Table(name = "user_info")
 public class UserInfo {
+    @OneToOne(optional = false)
+    @Column(name = "user")
     private User user;
+    @Column(name = "name")
     private String name;
+    @Column(name = "surname")
     private String surname;
+    @Column(name = "number")
     private String number;
+    @Column(name = "adress")
     private String address;
+    @Column(name = "email")
     private String email;
 
     public UserInfo() {

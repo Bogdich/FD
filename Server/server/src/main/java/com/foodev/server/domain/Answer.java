@@ -1,4 +1,4 @@
-package com.foodev.server.entity;
+package com.foodev.server.domain;
 
 public class Answer {
 

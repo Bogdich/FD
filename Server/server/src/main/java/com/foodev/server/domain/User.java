@@ -1,12 +1,23 @@
-package com.foodev.server.entity;
+package com.foodev.server.domain;
+
+import javax.persistence.*;
 
 /**
  * Created by Adrienne on 26.04.17.
  */
+@Entity
+@Table(name = "User")
 public class User {
+    @Id
+    @Column(name="id")
+    @GeneratedValue
     private int id;
+
+    @Column(name = "login")
     private String login;
+    @Column(name = "password")
     private String password;
+    @Column(name = "is_admin")
     private boolean isAdmin;
 
     public User() {

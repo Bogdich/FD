@@ -1,15 +1,25 @@
-package com.foodev.server.entity;
+package com.foodev.server.domain;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 
 /**
  * Created by Adrienne on 26.04.17.
  */
+@Entity
+@Table(name = "order")
 public class Order {
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
     private int id;
+    @ManyToOne
+    @Column(name = "user_id")
     private User user;
+    @Column(name = "date")
     private Date date;
+
     ArrayList<Dish> dish;
 
     public Order() {
